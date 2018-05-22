@@ -61,7 +61,6 @@ div::after {
 
 
 button {
-
   width: 80px;
   height: 25px;
   border: 0.5px solid red;
@@ -69,4 +68,5 @@ button {
   background-color: white;
   color: red;
   padding: 10px auto;
+  outline: none;
 }

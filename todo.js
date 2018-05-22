@@ -1,18 +1,18 @@
 function addItem() {
-   var newItem = document.createElement("div");
-   newItem.innerHTML = document.getElementById("task").value;
-   document.getElementById("taskList").appendChild(newItem);
+   var task = document.createElement("div");
+   task.innerHTML = document.getElementById("task").value;
+   taskItem = document.createElement("div");
+   taskItem.innerHTML = '<span>' + task.innerHTML + '</span>' + '<button>Remove</button>';
+   taskItem.className = 'task';
+   document.getElementById("taskList").appendChild(taskItem);
 
-   removeButton = document.createElement("button");
-   newItem.innerHTML = document.getElementById("task").value;
-   removeButton.innerHTML = "Remove";
-   document.getElementById("taskList").appendChild(removeButton);
    saveList();
   }
 
 
   function removeItem() {
-   document.getElementById("taskList").removeChild(this);
+   var removeTask = document.getElementById("taskList");
+   removeTask.removeChild(this);
    saveList();
   }
 
